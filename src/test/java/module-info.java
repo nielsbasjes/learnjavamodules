@@ -1,8 +1,10 @@
-module experimentTest {
-    requires experimentMain;
+open module tests.nl.basjes.jpms.experiment {
+    requires transitive nl.basjes.jpms.experiment;
 
-    requires org.junit.jupiter.api;
     requires com.esotericsoftware.kryo;
 
-    opens nl.basjes.tests.stats to org.junit.platform.commons;
+    requires org.slf4j;
+    requires org.slf4j.simple;
+    requires transitive org.junit.jupiter.engine;
+    requires transitive org.junit.jupiter.api;
 }

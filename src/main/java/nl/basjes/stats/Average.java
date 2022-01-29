@@ -1,6 +1,7 @@
 package nl.basjes.stats;
 
 import com.esotericsoftware.kryo.Kryo;
+import org.slf4j.Logger;
 
 import java.util.Objects;
 
@@ -45,4 +46,16 @@ public class Average {
     public int hashCode() {
         return Objects.hash(sum, count);
     }
+
+    @Override
+    public String toString() {
+        return "Average[" + sum + "/" + count + "]=" + get();
+    }
+
+    private static final Logger LOG = org.slf4j.LoggerFactory.getLogger(Average.class);
+
+    public void print() {
+        LOG.info("PRINTED: {}", this);
+    }
+
 }
