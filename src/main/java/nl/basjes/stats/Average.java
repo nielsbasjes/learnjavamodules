@@ -6,8 +6,8 @@ import org.slf4j.Logger;
 import java.util.Objects;
 
 public class Average {
-    int sum;
-    int count;
+    private int sum;
+    private int count;
 
     public Average() {
         this.sum = 0;

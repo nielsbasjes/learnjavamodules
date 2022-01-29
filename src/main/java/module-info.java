@@ -5,5 +5,5 @@ module nl.basjes.jpms.experiment {
     // Optional: Allow reflection by Kryo
     requires static com.esotericsoftware.kryo;
     requires org.slf4j;
-    opens nl.basjes.stats to com.esotericsoftware.kryo;//, tests.nl.basjes.jpms.experiment;
+    opens nl.basjes.stats to com.esotericsoftware.kryo, tests.nl.basjes.jpms.experiment;
 }
