@@ -74,8 +74,17 @@
         <version>3.9.0</version>
         <configuration>
           <release>${target.java.release}</release>
+          <compilerArgs>
+            <!-- Enable almost all warnings.-->
+            <arg>-Xlint:all</arg>
+<!--            <arg>-Werror</arg>-->
+            <arg>-implicit:class</arg>
+          </compilerArgs>
+          <showWarnings>true</showWarnings>
+          <showDeprecation>true</showDeprecation>
         </configuration>
       </plugin>
+
 
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
